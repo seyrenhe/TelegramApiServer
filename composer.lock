@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "adb3f78b0ae79061e4ad9976499da64b",
+    "content-hash": "d28342ed8115df8cd95c3164184d6712",
     "packages": [
         {
             "name": "amphp/amp",
-            "version": "v2.4.2",
+            "version": "v2.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/amp.git",
-                "reference": "feca077369a47263b22156b3c6389e55f3809f24"
+                "reference": "23ac95fc6d6973231763f5ed7d1309b39429b974"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/amp/zipball/feca077369a47263b22156b3c6389e55f3809f24",
-                "reference": "feca077369a47263b22156b3c6389e55f3809f24",
+                "url": "https://api.github.com/repos/amphp/amp/zipball/23ac95fc6d6973231763f5ed7d1309b39429b974",
+                "reference": "23ac95fc6d6973231763f5ed7d1309b39429b974",
                 "shasum": ""
             },
             "require": {
@@ -30,7 +30,7 @@
                 "jetbrains/phpstorm-stubs": "^2019.3",
                 "phpunit/phpunit": "^6.0.9 | ^7",
                 "react/promise": "^2",
-                "vimeo/psalm": "^3.9@dev"
+                "vimeo/psalm": "^3.11@dev"
             },
             "type": "library",
             "extra": {
@@ -82,7 +82,7 @@
                 "non-blocking",
                 "promise"
             ],
-            "time": "2020-04-04T15:05:26+00:00"
+            "time": "2020-04-19T15:54:21+00:00"
         },
         {
             "name": "amphp/byte-stream",
@@ -817,6 +817,61 @@
             "time": "2019-08-21T15:51:20+00:00"
         },
         {
+            "name": "amphp/mysql",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/mysql.git",
+                "reference": "cbef7dccaf076218470267a2739aa0f3b49511f1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/mysql/zipball/cbef7dccaf076218470267a2739aa0f3b49511f1",
+                "reference": "cbef7dccaf076218470267a2739aa0f3b49511f1",
+                "shasum": ""
+            },
+            "require": {
+                "amphp/amp": "^2",
+                "amphp/file": "^1 || ^0.3.5",
+                "amphp/socket": "^1",
+                "amphp/sql": "^1",
+                "amphp/sql-common": "^1",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "amphp/php-cs-fixer-config": "dev-master",
+                "amphp/phpunit-util": "^1.1.2",
+                "ext-openssl": "*",
+                "phpbench/phpbench": "^0.13.0",
+                "phpunit/phpunit": "^8 || ^7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amp\\Mysql\\": "src"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob Weinand",
+                    "email": "bobwei9@hotmail.com"
+                },
+                {
+                    "name": "Aaron Piotrowski",
+                    "email": "aaron@trowski.com"
+                }
+            ],
+            "description": "Asynchronous MySQL client for PHP based on Amp.",
+            "time": "2019-12-10T11:02:12+00:00"
+        },
+        {
             "name": "amphp/parallel",
             "version": "v1.3.0",
             "source": {
@@ -1060,6 +1115,95 @@
             "time": "2020-02-27T21:29:37+00:00"
         },
         {
+            "name": "amphp/sql",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/sql.git",
+                "reference": "0445ac35623a18105efeac93364288434430a4d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/sql/zipball/0445ac35623a18105efeac93364288434430a4d8",
+                "reference": "0445ac35623a18105efeac93364288434430a4d8",
+                "shasum": ""
+            },
+            "require": {
+                "amphp/amp": "^2",
+                "php": ">=7"
+            },
+            "require-dev": {
+                "amphp/php-cs-fixer-config": "dev-master",
+                "amphp/phpunit-util": "^1",
+                "phpunit/phpunit": "^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amp\\Sql\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Asynchronous SQL client for Amp.",
+            "homepage": "http://amphp.org",
+            "keywords": [
+                "async",
+                "asynchronous",
+                "database",
+                "db",
+                "sql"
+            ],
+            "time": "2019-09-26T16:23:02+00:00"
+        },
+        {
+            "name": "amphp/sql-common",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/sql-common.git",
+                "reference": "6bd462b80f440a06165b49bedeb868e549a6284a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/sql-common/zipball/6bd462b80f440a06165b49bedeb868e549a6284a",
+                "reference": "6bd462b80f440a06165b49bedeb868e549a6284a",
+                "shasum": ""
+            },
+            "require": {
+                "amphp/amp": "^2",
+                "amphp/sql": "^1",
+                "php": ">=7"
+            },
+            "require-dev": {
+                "amphp/php-cs-fixer-config": "dev-master",
+                "amphp/phpunit-util": "^1.3",
+                "phpunit/phpunit": "^6 || ^7 || ^8 || ^9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amp\\Sql\\Common\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Common classes for non-blocking SQL implementations.",
+            "homepage": "http://amphp.org",
+            "keywords": [
+                "async",
+                "asynchronous",
+                "database",
+                "db",
+                "sql"
+            ],
+            "time": "2020-03-04T18:01:46+00:00"
+        },
+        {
             "name": "amphp/sync",
             "version": "v1.3.0",
             "source": {
@@ -1118,20 +1262,20 @@
         },
         {
             "name": "amphp/websocket",
-            "version": "v1.0.0-rc1",
+            "version": "v1.0.0-rc2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/websocket.git",
-                "reference": "52b85af9657a4d674c8ae4210187eaf95d8c5e03"
+                "reference": "5fbeb1ea821e50af13fc682570f26e71afd23eca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/websocket/zipball/52b85af9657a4d674c8ae4210187eaf95d8c5e03",
-                "reference": "52b85af9657a4d674c8ae4210187eaf95d8c5e03",
+                "url": "https://api.github.com/repos/amphp/websocket/zipball/5fbeb1ea821e50af13fc682570f26e71afd23eca",
+                "reference": "5fbeb1ea821e50af13fc682570f26e71afd23eca",
                 "shasum": ""
             },
             "require": {
-                "amphp/amp": "^2",
+                "amphp/amp": "^2.2",
                 "amphp/byte-stream": "^1.6.1",
                 "amphp/socket": "^1",
                 "cash/lrucache": "^1",
@@ -1139,8 +1283,8 @@
             },
             "require-dev": {
                 "amphp/php-cs-fixer-config": "dev-master",
-                "amphp/phpunit-util": "^1.1",
-                "phpunit/phpunit": "^7"
+                "amphp/phpunit-util": "^1.1.2",
+                "phpunit/phpunit": "^8 || ^7"
             },
             "suggest": {
                 "ext-zlib": "Required for compression"
@@ -1160,19 +1304,20 @@
             ],
             "authors": [
                 {
-                    "name": "Bob Weinand",
-                    "email": "bobwei9@hotmail.com"
-                },
-                {
                     "name": "Aaron Piotrowski",
                     "email": "aaron@trowski.com"
                 },
                 {
                     "name": "Niklas Keller",
                     "email": "me@kelunik.com"
+                },
+                {
+                    "name": "Bob Weinand",
+                    "email": "bobwei9@hotmail.com"
                 }
             ],
             "description": "Shared code for websocket servers and clients.",
+            "homepage": "https://github.com/amphp/websocket",
             "keywords": [
                 "amp",
                 "amphp",
@@ -1181,7 +1326,7 @@
                 "non-blocking",
                 "websocket"
             ],
-            "time": "2019-08-06T16:55:52+00:00"
+            "time": "2020-04-18T14:05:23+00:00"
         },
         {
             "name": "amphp/websocket-client",
@@ -1612,16 +1757,16 @@
         },
         {
             "name": "danog/madelineproto",
-            "version": "dev-master",
+            "version": "dev-db",
             "source": {
                 "type": "git",
-                "url": "https://github.com/danog/MadelineProto.git",
-                "reference": "979d7575fc4bdee37c10b3d17fc2be90c3fed88c"
+                "url": "https://github.com/xtrime-ru/MadelineProto.git",
+                "reference": "35e5d0dbb7d9dfb3b9bd834ebd7698197c0ce573"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/danog/MadelineProto/zipball/979d7575fc4bdee37c10b3d17fc2be90c3fed88c",
-                "reference": "979d7575fc4bdee37c10b3d17fc2be90c3fed88c",
+                "url": "https://api.github.com/repos/xtrime-ru/MadelineProto/zipball/35e5d0dbb7d9dfb3b9bd834ebd7698197c0ce573",
+                "reference": "35e5d0dbb7d9dfb3b9bd834ebd7698197c0ce573",
                 "shasum": ""
             },
             "require": {
@@ -1631,6 +1776,7 @@
                 "amphp/file": "^1",
                 "amphp/http-client": "^4",
                 "amphp/http-client-cookies": "^1",
+                "amphp/mysql": "^2.0",
                 "amphp/socket": "^1",
                 "danog/dns-over-https": "^0.2",
                 "danog/ipc": "^0.1",
@@ -1685,7 +1831,39 @@
                     "src/polyfill.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "danog\\MadelineProto\\Test\\": "tests/danog/"
+                }
+            },
+            "scripts": {
+                "build": [
+                    "@docs",
+                    "@cs-fix"
+                ],
+                "check": [
+                    "@cs",
+                    "@test"
+                ],
+                "test-php7": [
+                    "tests/test-conversion.sh 70"
+                ],
+                "test-php56": [
+                    "tests/test-conversion.sh 5"
+                ],
+                "cs": [
+                    "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix -v --diff --dry-run"
+                ],
+                "cs-fix": [
+                    "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix -v --diff"
+                ],
+                "docs": [
+                    "php tools/build_docs.php"
+                ],
+                "test": [
+                    "@php -dzend.assertions=1 -dassert.exception=1 ./vendor/bin/phpunit --coverage-text --config tests/phpunit.xml"
+                ]
+            },
             "license": [
                 "AGPL-3.0-only"
             ],
@@ -1699,19 +1877,22 @@
             "homepage": "https://docs.madelineproto.xyz",
             "keywords": [
                 "GB",
-                "Messenger",
+                "PHP",
                 "audio",
                 "bytes",
                 "client",
                 "files",
+                "messenger",
                 "mtproto",
-                "php",
                 "protocol",
                 "stickers",
                 "telegram",
                 "video"
             ],
-            "time": "2020-04-03T12:10:46+00:00"
+            "support": {
+                "source": "https://github.com/xtrime-ru/MadelineProto/tree/db"
+            },
+            "time": "2020-04-26T19:29:01+00:00"
         },
         {
             "name": "danog/magicalserializer",
@@ -2711,16 +2892,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v4.1.3",
+            "version": "v4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "88f7acc95150bca002a498899f8b52f318e444c2"
+                "reference": "feb6dad5ae24b1380827aee1629b730080fde500"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/88f7acc95150bca002a498899f8b52f318e444c2",
-                "reference": "88f7acc95150bca002a498899f8b52f318e444c2",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/feb6dad5ae24b1380827aee1629b730080fde500",
+                "reference": "feb6dad5ae24b1380827aee1629b730080fde500",
                 "shasum": ""
             },
             "require": {
@@ -2771,13 +2952,7 @@
                 "env",
                 "environment"
             ],
-            "funding": [
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/vlucas/phpdotenv",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-03-27T23:37:15+00:00"
+            "time": "2020-04-12T15:20:09+00:00"
         }
     ],
     "packages-dev": [
@@ -2787,12 +2962,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "0f73cf4b4b9227eb8845723bc2a8869bc4dd6e8f"
+                "reference": "81541a731da2f245a08666de73169cb5da7ac573"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/0f73cf4b4b9227eb8845723bc2a8869bc4dd6e8f",
-                "reference": "0f73cf4b4b9227eb8845723bc2a8869bc4dd6e8f",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/81541a731da2f245a08666de73169cb5da7ac573",
+                "reference": "81541a731da2f245a08666de73169cb5da7ac573",
                 "shasum": ""
             },
             "conflict": {
@@ -2838,6 +3013,8 @@
                 "endroid/qr-code-bundle": "<3.4.2",
                 "enshrined/svg-sanitize": "<0.13.1",
                 "erusev/parsedown": "<1.7.2",
+                "ezsystems/demobundle": ">=5.4,<5.4.6.1",
+                "ezsystems/ezdemo-ls-extension": ">=5.4,<5.4.2.1",
                 "ezsystems/ezfind-ls": ">=5.3,<5.3.6.1|>=5.4,<5.4.11.1|>=2017.12,<2017.12.0.1",
                 "ezsystems/ezplatform": ">=1.7,<1.7.9.1|>=1.13,<1.13.5.1|>=2.5,<2.5.4",
                 "ezsystems/ezplatform-admin-ui": ">=1.3,<1.3.5|>=1.4,<1.4.6",
@@ -2913,7 +3090,7 @@
                 "serluck/phpwhois": "<=4.2.6",
                 "shopware/shopware": "<5.3.7",
                 "silverstripe/admin": ">=1.0.3,<1.0.4|>=1.1,<1.1.1",
-                "silverstripe/assets": ">=1,<1.3.5|>=1.4,<1.4.4",
+                "silverstripe/assets": ">=1,<1.4.7|>=1.5,<1.5.2",
                 "silverstripe/cms": "<4.3.6|>=4.4,<4.4.4",
                 "silverstripe/comments": ">=1.3,<1.9.99|>=2,<2.9.99|>=3,<3.1.1",
                 "silverstripe/forum": "<=0.6.1|>=0.7,<=0.7.3",
@@ -2926,7 +3103,7 @@
                 "silverstripe/userforms": "<3",
                 "simple-updates/phpwhois": "<=1",
                 "simplesamlphp/saml2": "<1.10.6|>=2,<2.3.8|>=3,<3.1.4",
-                "simplesamlphp/simplesamlphp": "<1.18.4",
+                "simplesamlphp/simplesamlphp": "<1.18.6",
                 "simplesamlphp/simplesamlphp-module-infocard": "<1.0.1",
                 "simplito/elliptic-php": "<1.0.6",
                 "slim/slim": "<2.6",
@@ -3053,7 +3230,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-03-31T14:30:16+00:00"
+            "time": "2020-04-23T00:01:30+00:00"
         }
     ],
     "aliases": [],
