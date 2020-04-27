@@ -873,16 +873,16 @@
         },
         {
             "name": "amphp/parallel",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/parallel.git",
-                "reference": "346d3f50939d3533a49ef161a0b9c8cca6eee809"
+                "reference": "2c1039bf7ca137eae4d954b14c09a7535d7d4e1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/parallel/zipball/346d3f50939d3533a49ef161a0b9c8cca6eee809",
-                "reference": "346d3f50939d3533a49ef161a0b9c8cca6eee809",
+                "url": "https://api.github.com/repos/amphp/parallel/zipball/2c1039bf7ca137eae4d954b14c09a7535d7d4e1c",
+                "reference": "2c1039bf7ca137eae4d954b14c09a7535d7d4e1c",
                 "shasum": ""
             },
             "require": {
@@ -890,6 +890,7 @@
                 "amphp/byte-stream": "^1.6.1",
                 "amphp/parser": "^1",
                 "amphp/process": "^1",
+                "amphp/serialization": "^1",
                 "amphp/sync": "^1.0.1",
                 "php": ">=7.1"
             },
@@ -932,7 +933,7 @@
                 "multi-processing",
                 "multi-threading"
             ],
-            "time": "2020-02-23T15:28:43+00:00"
+            "time": "2020-04-27T15:12:37+00:00"
         },
         {
             "name": "amphp/parser",
@@ -1039,6 +1040,60 @@
             "description": "Asynchronous process manager.",
             "homepage": "https://github.com/amphp/process",
             "time": "2019-02-26T16:33:03+00:00"
+        },
+        {
+            "name": "amphp/serialization",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/serialization.git",
+                "reference": "693e77b2fb0b266c3c7d622317f881de44ae94a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/serialization/zipball/693e77b2fb0b266c3c7d622317f881de44ae94a1",
+                "reference": "693e77b2fb0b266c3c7d622317f881de44ae94a1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "amphp/php-cs-fixer-config": "dev-master",
+                "phpunit/phpunit": "^9 || ^8 || ^7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amp\\Serialization\\": "src"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Piotrowski",
+                    "email": "aaron@trowski.com"
+                },
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
+                }
+            ],
+            "description": "Serialization tools for IPC and data storage in PHP.",
+            "homepage": "https://github.com/amphp/serialization",
+            "keywords": [
+                "async",
+                "asynchronous",
+                "serialization",
+                "serialize"
+            ],
+            "time": "2020-03-25T21:39:07+00:00"
         },
         {
             "name": "amphp/socket",
@@ -1761,12 +1816,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/xtrime-ru/MadelineProto.git",
-                "reference": "35e5d0dbb7d9dfb3b9bd834ebd7698197c0ce573"
+                "reference": "0e4d34ad2d825638e8dd0ae340ffe65cd3b08bb7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xtrime-ru/MadelineProto/zipball/35e5d0dbb7d9dfb3b9bd834ebd7698197c0ce573",
-                "reference": "35e5d0dbb7d9dfb3b9bd834ebd7698197c0ce573",
+                "url": "https://api.github.com/repos/xtrime-ru/MadelineProto/zipball/0e4d34ad2d825638e8dd0ae340ffe65cd3b08bb7",
+                "reference": "0e4d34ad2d825638e8dd0ae340ffe65cd3b08bb7",
                 "shasum": ""
             },
             "require": {
@@ -1839,7 +1894,8 @@
             "scripts": {
                 "build": [
                     "@docs",
-                    "@cs-fix"
+                    "@cs-fix",
+                    "@psalm"
                 ],
                 "check": [
                     "@cs",
@@ -1856,6 +1912,9 @@
                 ],
                 "cs-fix": [
                     "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix -v --diff"
+                ],
+                "psalm": [
+                    "psalm"
                 ],
                 "docs": [
                     "php tools/build_docs.php"
@@ -1892,7 +1951,7 @@
             "support": {
                 "source": "https://github.com/xtrime-ru/MadelineProto/tree/db"
             },
-            "time": "2020-04-26T19:29:01+00:00"
+            "time": "2020-05-03T03:02:33+00:00"
         },
         {
             "name": "danog/magicalserializer",
