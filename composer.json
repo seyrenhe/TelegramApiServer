@@ -38,5 +38,10 @@
     "psr-4": {
       "TelegramApiServer\\": "src/"
     }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "cd vendor/danog/madelineproto/ && git submodule init && git submodule update"
+    ]
   }
 }

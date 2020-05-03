@@ -9,6 +9,7 @@ $root = __DIR__;
     if (!file_exists($root . '/vendor/autoload.php')) {
         if (file_exists(__DIR__ . '/../../..' . '/vendor/autoload.php')) {
             $root = __DIR__ . '/../../..';
+            system("cd {$root}/vendor/danog/madelineproto/ && git submodule init && git submodule update");
         } else {
             system('composer install -o --no-dev');
         }
